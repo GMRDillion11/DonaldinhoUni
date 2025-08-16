@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Everlight University</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 0.4s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 85%;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .login-box h2 {
+      color: #002147;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .login-box label {
+      display: block;
+      text-align: left;
+      font-size: 14px;
+      color: #002147;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: gold;
+      color: #002147;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-box button:hover {
+      background-color: #ffd700;
+    }
+
+    .login-box small {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #666;
+      font-style: italic;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: #555;
+      font-size: 13px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <img src="Logo.jpg" alt="Everlight Logo" />
+    <h2>🎓 Everlight Login</h2>
+    <form onsubmit="loginUser(event)">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" required />
+
+      <button type="submit">Login</button>
+      <small>Hint: Just enter anything to login</small>
+    </form>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Everlight University. All rights reserved.
+  </div>
+
+  <script>
+    function loginUser(e) {
+      e.preventDefault();
+      window.location.href = "Homepage.html";
+    }
+  </script>
+
+</body>
+</html>
